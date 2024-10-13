@@ -5,10 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      primary: '#35374B',
-      secondary: '#344955',
-      ternary: '#50727B',
-      quarternary: '#78A083'
+      colors: {
+        'primary': '#FEFAE0',
+        'secondary': '#F2EED7',
+        'ternary': '#626F47',
+        'highlight': '#798645'
+      }
     },
     fontFamily: {
       'headerTitle': ['Righteous'],
