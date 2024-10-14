@@ -1,0 +1,6 @@
+-- About Me --
+
+Hi, I'm Dallas. I'm a Computer Science graduate and aspiring Software Engineer. I'm deeply passionate
+about learning and problem-solving. Though I focus on web development, I have also dabbled in cybersecurity,
+game development, and more. I find designing and coding both technically and creatively appealing, and enjoy
+developing new projects, discovering new technologies, and the process that comes with it.
