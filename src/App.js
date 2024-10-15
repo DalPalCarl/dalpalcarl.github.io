@@ -1,5 +1,8 @@
-import portrait from './portrait.jpg';
-import appDev from './app-development.png';
+import portrait from './pics/portrait.jpg';
+import appDev from './pics/app-development.png';
+import gworgImg from './pics/GWOrgTitle.png';
+import { FaLinkedin, FaGithub, FaItchIo, FaJava } from "react-icons/fa";
+import { SiJavascript } from "react-icons/si";
 import './App.css';
 
 function App() {
@@ -10,10 +13,10 @@ function App() {
         <img className="size-60 self-center my-5 shadow-lg rounded-full border-7 border-solid border-highlight hover:border-white transition-all ease-linear" src={portrait} alt='Portrait' />
         <p className="my-3 font-headerTitle text-6xl text-center text-highlight transition-all ease-linear">Dallas Carlson</p>
         <p className='mb-5 font-headerTitle text-black text-2xl'> - Software Engineer - </p>
-        <div id="headerLinks" className="flex flex-row space-x-10 mx-auto my-5">
-          <p className='font-headerTitle text-md'>LinkedIn</p>
-          <p className='font-headerTitle text-md'>GitHub</p>
-          <p className='font-headerTitle text-md'>Itch.io</p>
+        <div id="headerLinks" className="flex flex-row space-x-20 mx-auto my-8">
+          <a href='https://www.linkedin.com/in/dallas-carlson3601'><FaLinkedin className='size-7 text-highlight hover:size-10 transition-all ease-linear'/></a>
+          <a href='http://github.com/DalPalCarl'><FaGithub className='size-7 text-highlight hover:size-10 transition-all ease-linear' /></a>
+          <a href='https://dalpalcarl.itch.io'><FaItchIo className='size-7 text-highlight hover:size-10 transition-all ease-linear' /></a>
         </div>
       </div>
 
@@ -21,11 +24,11 @@ function App() {
       <div className='bg-breakLight'><br/></div>
 
       <div id="aboutMeSection" className="bg-secondary mx-auto flex flex-col">
-        <p className='font-headerTitle text-2xl my-4 text-highlight '>About Me</p>
-        <div className='container flex flex-row gap-4 mx-auto mb-5'>
-          <img className="size-60" src={appDev} alt='App Development' />
-          <div className='rounded-2xl bg-breakDark px-1 place-self-center m-5'>
-            <p id='aboutMeText' className='font-headerTitle text-lg text-left text-highlight'>Hi, I'm Dallas. I'm a Computer Science graduate and aspiring Software Engineer. I'm deeply passionate
+        <p className='font-headerTitle text-2xl my-4 text-highlight'>About Me</p>
+        <div className='container flex flex-row justify-center mx-auto my-4 gap-20'>
+          <img className="size-60 hidden" src={appDev} alt='App Development' />
+          <div className='rounded-2xl bg-breakLight px-1 my-5 md:w-2/5'>
+            <p id='aboutMeText' className='font-headerTitle text-lg text-left p-4 text-highlight'>Hi, I'm Dallas. I'm a Computer Science graduate and aspiring Software Engineer. I'm deeply passionate
             about learning and problem-solving. Though I focus on web development, I have also dabbled in cybersecurity,
             game development, and more. I find designing and coding both technically and creatively appealing, and enjoy
             developing new projects, discovering new technologies, and the process that comes with it.</p>
@@ -38,6 +41,20 @@ function App() {
 
       <div id='areasSection' className='bg-ternary mx-auto flex flex-col'>
         <p className='font-headerTitle text-2xl my-4 text-primary'>Areas of Interest</p>
+        <div id='areas' className='flex justify-around flex-col md:flex-row'>
+          <div className='container mx-3 w-1/3'>
+            <p className='font-headerTitle text-xl my-4 text-primary'>Frontend Development</p>
+            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
+          </div>
+          <div className='container mx-3 w-1/3'>
+            <p className='font-headerTitle text-xl my-4 text-primary'>Game Development</p>
+            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
+          </div>
+          <div className='container mx-3 w-1/3'>
+            <p className='font-headerTitle text-xl my-4 text-primary'>Test</p>
+            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
+          </div>
+        </div>
       </div>
 
       {/* Skills */}
@@ -45,6 +62,11 @@ function App() {
 
       <div id='skillsSection' className='bg-primary mx-auto flex flex-col'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Skills</p>
+
+        <div id='iconGrid' className='flex flex-wrap justify-end gap-5 m-5'>
+          <FaJava className='size-20' />
+          <SiJavascript className='size-20' />
+        </div>
       </div>
 
       {/* Projects */}
@@ -52,6 +74,13 @@ function App() {
 
       <div id='projectsSection' className='bg-secondary mx-auto flex flex-col'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Projects</p>
+        <div id='projectGrid' className='container flex mx-auto'>
+          <div className='container text-left m-5'>
+            <p className='font-headerTitle text-highlight'>GWOrg</p>
+            <p className='font-headerTitle text-black'>September - 2024</p>
+            <a href="https://dalpalcarl.github.io/GWOrgWeb/"><img src={gworgImg} className='w-50 h-40 rounded-2xl border-solid border-7 border-highlight' alt='GWOrg' /></a>
+          </div>
+        </div>
       </div>
 
       {/* Contact Me */}
@@ -67,6 +96,7 @@ function App() {
         <form>
 
         </form>
+        <p className='bg-ternary text-white'>Copyright &#169; Dallas Carlson 2024</p>
       </div>
     </div>
   );
