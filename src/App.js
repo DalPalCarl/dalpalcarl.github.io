@@ -6,8 +6,9 @@ import { SiJavascript } from "react-icons/si";
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
+    <div className="App ">
       {/* Portfolio Header */}
       <div id="folioHeader" className="bg-primary mx-auto flex flex-col">
         <img className="size-60 self-center my-5 shadow-lg rounded-full border-7 border-solid border-highlight hover:border-white transition-all ease-linear" src={portrait} alt='Portrait' />
@@ -93,8 +94,24 @@ function App() {
       {/* Footer */}
 
       <div id='footer' className='bg-ternary mx-auto flex flex-col'>
-        <form>
-
+        <form className='text-right m-5 flex flex-col mx-auto'>
+          <div className=''>
+            <label for='cname' className='p-12 my-4 text-primary text-xl'>Name: </label>
+            <input type='text' id='cname' className=''/>
+          </div>
+          <div className=''>
+            <label for='cemail' className='p-12 my-4 text-primary text-xl'>Email: </label>
+            <input type='text' id='cemail' name='cemail' />
+          </div>
+          <div className=''>
+            <label for='cnumber' className='p-12 my-4 text-primary text-xl'>Phone Number: </label>
+            <input type='text' id='cnumber' name='cnumber' />
+          </div>
+          <div className=''>
+            <label for='cmessage' className='p-12 my-4 text-primary text-xl'>Message: </label>
+            <input type='text' id='cmessage' name='cmessage' className=''/>
+          </div>
+          <button className='w-20 my-4 self-end'>Submit</button>
         </form>
         <p className='bg-ternary text-white'>Copyright &#169; Dallas Carlson 2024</p>
       </div>
