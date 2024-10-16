@@ -1,11 +1,21 @@
 import portrait from './pics/portrait.jpg';
 import gworgImg from './pics/GWOrgTitle.png';
+import { useForm, ValidationError } from '@formspree/react';
 import { FaLinkedin, FaGithub, FaItchIo, FaJava, FaHtml5, FaPython, FaCss3, FaReact, FaBootstrap, FaNodeJs} from "react-icons/fa";
 import { SiJavascript, SiGodotengine } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import './App.css';
 
 function App() {
+  const [state, handleSubmit] = useForm("mjkvvprn");
+  if(state.succeeded){
+    return (
+      <div className='App'>
+        <p className='font-headerTitle text-2xl text-highlight'>Thank you for contacting me!</p>
+        <p className='font-headerTitle text-lg text-highlight underline hover:text-blue-700 transition-all ease-linear'><a href='https://dalpalcarl.github.io'>Return to website</a></p>
+      </div>
+    );
+  }
 
   return (
     <div className="App ">
@@ -39,18 +49,18 @@ function App() {
       {/* Areas of Interest */}
       <div className='bg-breakGreen'><br/></div>
 
-      <div id='areasSection' className='bg-ternary mx-auto flex flex-col'>
+      <div id='areasSection' className='bg-ternary mx-auto flex flex-col justify-evenly'>
         <p className='font-headerTitle text-2xl my-4 text-primary'>Areas of Interest</p>
-        <div id='areas' className='flex justify-around flex-col md:flex-row'>
-          <div className='container mx-3 w-1/3'>
+        <div id='areas' className='flex justify-center flex-col md:flex-row'>
+          <div className=' mx-3 w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Frontend Development</p>
             <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
           </div>
-          <div className='container mx-3 w-1/3'>
+          <div className='container mx-3 w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Game Development</p>
             <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
           </div>
-          <div className='container mx-3 w-1/3'>
+          <div className='container mx-3 w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Test</p>
             <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
           </div>
@@ -63,7 +73,7 @@ function App() {
       <div id='skillsSection' className='bg-primary mx-auto flex flex-col'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Skills</p>
 
-        <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-between '>
+        <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-evenly '>
           <p className='font-headerTitle text-lg my-4 text-highlight'>Languages:</p>
           <div className='flex gap-5 m-5'>
             <FaJava className='size-20' />
@@ -74,7 +84,7 @@ function App() {
 
           </div>
         </div>
-        <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-between'>
+        <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-evenly'>
           <p className='font-headerTitle text-lg my-4 text-highlight'>Technologies:</p>
           <div className='flex gap-5 m-5'>
             <FaReact className='size-20' />
@@ -89,7 +99,7 @@ function App() {
       {/* Projects */}
       <div className='bg-breakLight'><br/></div>
 
-      <div id='projectsSection' className='bg-secondary mx-auto flex flex-col'>
+      <div id='projectsSection' className='bg-secondary mx-auto flex flex-col mb-5'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Projects</p>
         <div id='projectGrid' className='flex mx-auto'>
           <div className='container text-left m-5'>
@@ -109,25 +119,30 @@ function App() {
 
       {/* Footer */}
 
-      <div id='footer' className='bg-ternary mx-auto flex flex-col'>
-        <form className='text-right m-5 flex flex-col mx-auto'>
+      <div id='footer' className='bg-ternary flex flex-col justify-center gap-4'>
+        <form className='text-right m-5 flex flex-col mx-auto gap-3' onSubmit={handleSubmit}>
           <div className=''>
-            <label for='cname' className='p-12 my-4 text-primary text-xl'>Name: </label>
-            <input type='text' id='cname' className=''/>
+            <label for='name' className='p-12 my-4 text-primary text-xl'>Name: </label>
+            <input type='text' id='name' className=''/>
+            <ValidationError prefix='Name' field='name' errors={state.errors} />
           </div>
           <div className=''>
-            <label for='cemail' className='p-12 my-4 text-primary text-xl'>Email: </label>
-            <input type='text' id='cemail' name='cemail' />
+            <label for='email' className='p-12 my-4 text-primary text-xl'>Email: </label>
+            <input type='email' id='email' name='email' />
+            <ValidationError prefix='Email' field='email' errors={state.errors} />
           </div>
           <div className=''>
-            <label for='cnumber' className='p-12 my-4 text-primary text-xl'>Phone Number: </label>
-            <input type='text' id='cnumber' name='cnumber' />
+            <label for='number' className='p-12 my-4 text-primary text-xl'>Phone Number: </label>
+            <input type='tel' id='number' name='number' />
+            <ValidationError prefix='Number' field='number' errors={state.errors} />
           </div>
-          <div className=''>
-            <label for='cmessage' className='p-12 my-4 text-primary text-xl'>Message: </label>
-            <input type='text' id='cmessage' name='cmessage' className=''/>
+          <br/>
+          <div className='text-left flex-col flex ms-12'>
+            <label for='message' className='py-3 text-primary text-xl'>Message: </label>
+            <textarea type='text' id='cmessage' name='message' className='h-20'/>
+            <ValidationError prefix='Message' field='message' errors={state.errors} />
           </div>
-          <button className='w-20 my-4 self-end'>Submit</button>
+          <button className='w-20 my-4 self-end' type='submit' disabled={state.submitting} >Submit</button>
         </form>
         <p className='bg-ternary text-white'>Copyright &#169; Dallas Carlson 2024</p>
       </div>
