@@ -1,8 +1,8 @@
 import portrait from './pics/portrait.jpg';
-import appDev from './pics/app-development.png';
 import gworgImg from './pics/GWOrgTitle.png';
-import { FaLinkedin, FaGithub, FaItchIo, FaJava } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { FaLinkedin, FaGithub, FaItchIo, FaJava, FaHtml5, FaPython, FaCss3, FaReact, FaBootstrap, FaNodeJs} from "react-icons/fa";
+import { SiJavascript, SiGodotengine } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
 import './App.css';
 
 function App() {
@@ -27,8 +27,7 @@ function App() {
       <div id="aboutMeSection" className="bg-secondary mx-auto flex flex-col">
         <p className='font-headerTitle text-2xl my-4 text-highlight'>About Me</p>
         <div className='container flex flex-row justify-center mx-auto my-4 gap-20'>
-          <img className="size-60 hidden" src={appDev} alt='App Development' />
-          <div className='rounded-2xl bg-breakLight px-1 my-5 md:w-2/5'>
+          <div className='rounded-2xl bg-breakLight px-1 my-5 mx-4 md:w-3/5'>
             <p id='aboutMeText' className='font-headerTitle text-lg text-left p-4 text-highlight'>Hi, I'm Dallas. I'm a Computer Science graduate and aspiring Software Engineer. I'm deeply passionate
             about learning and problem-solving. Though I focus on web development, I have also dabbled in cybersecurity,
             game development, and more. I find designing and coding both technically and creatively appealing, and enjoy
@@ -64,9 +63,26 @@ function App() {
       <div id='skillsSection' className='bg-primary mx-auto flex flex-col'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Skills</p>
 
-        <div id='iconGrid' className='flex flex-wrap justify-end gap-5 m-5'>
-          <FaJava className='size-20' />
-          <SiJavascript className='size-20' />
+        <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-between '>
+          <p className='font-headerTitle text-lg my-4 text-highlight'>Languages:</p>
+          <div className='flex gap-5 m-5'>
+            <FaJava className='size-20' />
+            <SiJavascript className='size-20' />
+            <FaHtml5 className='size-20' />
+            <FaPython className='size-20' />
+            <FaCss3 className='size-20' />
+
+          </div>
+        </div>
+        <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-between'>
+          <p className='font-headerTitle text-lg my-4 text-highlight'>Technologies:</p>
+          <div className='flex gap-5 m-5'>
+            <FaReact className='size-20' />
+            <FaBootstrap className='size-20' />
+            <SiGodotengine className='size-20' />
+            <IoLogoFirebase className='size-20' />
+            <FaNodeJs className='size-20' />
+          </div>
         </div>
       </div>
 
@@ -75,7 +91,7 @@ function App() {
 
       <div id='projectsSection' className='bg-secondary mx-auto flex flex-col'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Projects</p>
-        <div id='projectGrid' className='container flex mx-auto'>
+        <div id='projectGrid' className='flex mx-auto'>
           <div className='container text-left m-5'>
             <p className='font-headerTitle text-highlight'>GWOrg</p>
             <p className='font-headerTitle text-black'>September - 2024</p>
