@@ -4,3 +4,23 @@ Hi, I'm Dallas. I'm a Computer Science graduate and aspiring Software Engineer. 
 about learning and problem-solving. Though I focus on web development, I have also dabbled in cybersecurity,
 game development, and more. I find designing and coding both technically and creatively appealing, and enjoy
 developing new projects, discovering new technologies, and the process that comes with it.
+
+-- Areas of Interest --
+
+Frontend Development:
+
+One of my favorite things about developing applications is seeing others use them, and a good user experience
+is dependent on frontend development and design. I am continuously intrigued by the way information is presented,
+and strive to create appealing visuals myself in my projects.
+
+Game Development:
+
+Though I try to showcase my technical abilities, there is also a more creative side to programming that I find
+in game development. I find it to be an artful approach to learning principles of OOP and an invaluable teacher
+for writing cohesive code.
+
+Lifelong Learning:
+
+Immersing myself in the world of Computer Science is a deep passion of mine; it is something I can always learn
+more about, especially with how quickly it evolves. Creating something from imagination with a purpose is
+what fulfils me as a developer.

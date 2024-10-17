@@ -1,8 +1,8 @@
 import portrait from './pics/portrait.jpg';
 import gworgImg from './pics/GWOrgTitle.png';
 import { useForm, ValidationError } from '@formspree/react';
-import { FaLinkedin, FaGithub, FaItchIo, FaJava, FaHtml5, FaPython, FaCss3, FaReact, FaBootstrap, FaNodeJs} from "react-icons/fa";
-import { SiJavascript, SiGodotengine } from "react-icons/si";
+import { FaLinkedin, FaGithub, FaItchIo, FaJava, FaHtml5, FaPython, FaCss3, FaReact, FaBootstrap, FaNodeJs, FaGitAlt} from "react-icons/fa";
+import { SiJavascript, SiGodotengine, SiTailwindcss } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import './App.css';
 
@@ -50,19 +50,25 @@ function App() {
       <div className='bg-breakGreen'><br/></div>
 
       <div id='areasSection' className='bg-ternary mx-auto flex flex-col justify-evenly'>
-        <p className='font-headerTitle text-2xl my-4 text-primary'>Areas of Interest</p>
-        <div id='areas' className='flex justify-center flex-col md:flex-row'>
+        <p className='font-headerTitle text-2xl my-12 text-primary'>Areas of Interest</p>
+        <div id='areas' className='flex justify-evenly my-12 flex-col md:flex-row'>
           <div className=' mx-3 w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Frontend Development</p>
-            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
+            <p className='font-headerTitle text-lg my-5 text-primary text-left'>One of my favorite things about developing applications is seeing others use them, and a good user experience
+              is dependent on frontend development and design. I am continuously intrigued by the way information is presented,
+              and strive to create appealing visuals myself in my projects.</p>
           </div>
           <div className='container mx-3 w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Game Development</p>
-            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
+            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Though I try to showcase my technical abilities, there is also a more creative side to programming that I find
+              in game development. I find it to be an artful approach to learning principles of OOP and an invaluable teacher
+              for writing cohesive code.</p>
           </div>
           <div className='container mx-3 w-1/5'>
-            <p className='font-headerTitle text-xl my-4 text-primary'>Test</p>
-            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod tincidunt nibh est felis varius elit. Rhoncus suspendisse mi turpis neque hac habitant nisl. Lacinia imperdiet ante vel odio nisl lacinia.</p>
+            <p className='font-headerTitle text-xl my-4 text-primary'>Lifelong Learning</p>
+            <p className='font-headerTitle text-lg my-5 text-primary text-left'>Immersing myself in the world of Computer Science is a deep passion of mine; it is something I can always learn
+              more about, especially with how quickly it evolves. Creating something from imagination with a purpose is
+              what fulfils me as a developer.</p>
           </div>
         </div>
       </div>
@@ -92,6 +98,8 @@ function App() {
             <SiGodotengine className='size-20' />
             <IoLogoFirebase className='size-20' />
             <FaNodeJs className='size-20' />
+            <SiTailwindcss className='size-20' />
+            <FaGitAlt className='size-20' />
           </div>
         </div>
       </div>
@@ -101,7 +109,7 @@ function App() {
 
       <div id='projectsSection' className='bg-secondary mx-auto flex flex-col mb-5'>
         <p className='font-headerTitle text-2xl my-4 text-highlight'>Projects</p>
-        <div id='projectGrid' className='flex mx-auto'>
+        <div id='projectGrid' className='flex mx-auto mb-10'>
           <div className='container text-left m-5'>
             <p className='font-headerTitle text-highlight'>GWOrg</p>
             <p className='font-headerTitle text-black'>September - 2024</p>
@@ -123,26 +131,26 @@ function App() {
         <form className='text-right m-5 flex flex-col mx-auto gap-3' onSubmit={handleSubmit}>
           <div className=''>
             <label for='name' className='p-12 my-4 text-primary text-xl'>Name: </label>
-            <input type='text' id='name' className=''/>
+            <input type='text' id='name' className='rounded-md border-0 ring-1 ring-ternary h-6 p-1 font-headerTitle w-60'/>
             <ValidationError prefix='Name' field='name' errors={state.errors} />
           </div>
           <div className=''>
             <label for='email' className='p-12 my-4 text-primary text-xl'>Email: </label>
-            <input type='email' id='email' name='email' />
+            <input type='email' id='email' name='email' className='rounded-md border-0 ring-1 ring-ternary h-6 p-1 font-headerTitle w-60'/>
             <ValidationError prefix='Email' field='email' errors={state.errors} />
           </div>
           <div className=''>
             <label for='number' className='p-12 my-4 text-primary text-xl'>Phone Number: </label>
-            <input type='tel' id='number' name='number' />
+            <input type='tel' id='number' name='number' className='rounded-md border-0 ring-1 ring-ternary h-6 p-1 font-headerTitle w-60'/>
             <ValidationError prefix='Number' field='number' errors={state.errors} />
           </div>
           <br/>
-          <div className='text-left flex-col flex ms-12'>
+          <div className='text-left flex-col flex ms-12 my-2'>
             <label for='message' className='py-3 text-primary text-xl'>Message: </label>
-            <textarea type='text' id='cmessage' name='message' className='h-20'/>
+            <textarea type='text' id='cmessage' name='message' className='rounded-md border-0 ring-1 ring-ternary h-20 font-headerTitle p-3'/>
             <ValidationError prefix='Message' field='message' errors={state.errors} />
           </div>
-          <button className='w-20 my-4 self-end' type='submit' disabled={state.submitting} >Submit</button>
+          <button className='w-20 my-4 self-end text-white font-headerTitle border-0 bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2' type='submit' disabled={state.submitting} >Submit</button>
         </form>
         <p className='bg-ternary text-white'>Copyright &#169; Dallas Carlson 2024</p>
       </div>
