@@ -52,19 +52,19 @@ function App() {
       <div id='areasSection' className='bg-ternary mx-auto flex flex-col justify-evenly'>
         <p className='font-headerTitle text-2xl my-12 text-primary'>Areas of Interest</p>
         <div id='areas' className='flex justify-evenly my-12 flex-col md:flex-row'>
-          <div className=' mx-3 w-1/5'>
+          <div className='mx-auto md:mx-3 md:w-1/5 w-80'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Frontend Development</p>
             <p className='font-headerTitle text-lg my-5 text-primary text-left'>One of my favorite things about developing applications is seeing others use them, and a good user experience
               is dependent on frontend development and design. I am continuously intrigued by the way information is presented,
               and strive to create appealing visuals myself in my projects.</p>
           </div>
-          <div className='container mx-3 w-1/5'>
+          <div className='mx-auto md:mx-3 w-80 md:w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Game Development</p>
             <p className='font-headerTitle text-lg my-5 text-primary text-left'>Though I try to showcase my technical abilities, there is also a more creative side to programming that I find
               in game development. I find it to be an artful approach to learning principles of OOP and an invaluable teacher
               for writing cohesive code.</p>
           </div>
-          <div className='container mx-3 w-1/5'>
+          <div className='mx-auto md:mx-3 w-80 md:w-1/5'>
             <p className='font-headerTitle text-xl my-4 text-primary'>Lifelong Learning</p>
             <p className='font-headerTitle text-lg my-5 text-primary text-left'>Immersing myself in the world of Computer Science is a deep passion of mine; it is something I can always learn
               more about, especially with how quickly it evolves. Creating something from imagination with a purpose is
@@ -82,7 +82,7 @@ function App() {
         <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-evenly '>
           <p className='font-headerTitle text-lg my-4 text-highlight'>Languages:</p>
           <div className='flex gap-5 m-5'>
-            <FaJava className='size-20' />
+            <FaJava className='size-20 hover:overline decoration-highlight decoration-4' />
             <SiJavascript className='size-20' />
             <FaHtml5 className='size-20' />
             <FaPython className='size-20' />
@@ -92,8 +92,8 @@ function App() {
         </div>
         <div id='frontEnd' className='flex flex-col md:flex-row m-5 md:justify-evenly'>
           <p className='font-headerTitle text-lg my-4 text-highlight'>Technologies:</p>
-          <div className='flex gap-5 m-5'>
-            <FaReact className='size-20' />
+          <div className='flex flex-wrap justify-center gap-5 m-5'>
+            <FaReact className='size-20 group' />
             <FaBootstrap className='size-20' />
             <SiGodotengine className='size-20' />
             <IoLogoFirebase className='size-20' />
@@ -125,10 +125,8 @@ function App() {
         <p className='font-headerTitle text-2xl my-4 text-primary'>Contact Me</p>
       </div>
 
-      {/* Footer */}
-
       <div id='footer' className='bg-ternary flex flex-col justify-center gap-4'>
-        <form className='text-right m-5 flex flex-col mx-auto gap-3' onSubmit={handleSubmit}>
+        <form className='text-center md:text-right m-5 flex flex-col md:mx-auto md:justify-center gap-3' onSubmit={handleSubmit}>
           <div className=''>
             <label for='name' className='p-12 my-4 text-primary text-xl'>Name: </label>
             <input type='text' id='name' className='rounded-md border-0 ring-1 ring-ternary h-6 p-1 font-headerTitle w-60'/>
@@ -145,13 +143,16 @@ function App() {
             <ValidationError prefix='Number' field='number' errors={state.errors} />
           </div>
           <br/>
-          <div className='text-left flex-col flex ms-12 my-2'>
+          <div className='text-center md:text-left flex-col flex md:ms-12 my-2'>
             <label for='message' className='py-3 text-primary text-xl'>Message: </label>
             <textarea type='text' id='cmessage' name='message' className='rounded-md border-0 ring-1 ring-ternary h-20 font-headerTitle p-3'/>
             <ValidationError prefix='Message' field='message' errors={state.errors} />
           </div>
           <button className='w-20 my-4 self-end text-white font-headerTitle border-0 bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2' type='submit' disabled={state.submitting} >Submit</button>
         </form>
+
+        {/* Footer */}
+
         <p className='bg-ternary text-white'>Copyright &#169; Dallas Carlson 2024</p>
       </div>
     </div>
