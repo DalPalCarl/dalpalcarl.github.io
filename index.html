@@ -11,6 +11,27 @@
 </head>
 <body>
   <div id="folioHeader" class="">
+    <div id="folioContent">
+      <img id="folioImg" src="./assets/portrait.jpg" alt="Portrait"/>
+      <p class='titleText font-g-reg'>Dallas Carlson</p>
+      <p class='titleText font-g-reg' style='font-size: medium;'> - Software Developer - </p>
+      <div id="headerLinks" class='font-c'>
+          <a href='https://www.linkedin.com/in/dallas-carlson3601'>LinkedIn</a>
+          <a href='http://github.com/DalPalCarl'>GitHub</a>
+          <a href='https://dalpalcarl.itch.io'>Itch.io</a>
+      </div>
+      <nav id='navSection'>
+        <ul>
+          <li><a href="#aboutMe">About</a></li>
+          <li><a href="#skillsSection">Skills</a></li>
+          <li><a href="#projectsSection">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="pageContent">
+    <!-- Mobile Header -->
+    <div id='mobileHeader'>
       <img id="folioImg" src="./assets/portrait.jpg" alt="Portrait"/>
       <p class='titleText font-g-reg'>Dallas Carlson</p>
       <p class='titleText font-g-reg'> - Software Developer - </p>
@@ -19,11 +40,10 @@
           <a href='http://github.com/DalPalCarl'>GitHub</a>
           <a href='https://dalpalcarl.itch.io'>Itch.io</a>
       </div>
-  </div>
-  <div class="pageContent">
+    </div>
     <!-- About Me -->
     <div id="aboutMe" class="font-c">
-      <p class='font-g'>About Me</p>
+      <p class='font-g-reg sectionHeader'>About Me</p>
       <p id='aboutMeText' class=''>Hi, I'm Dallas. I'm a Computer Science graduate and aspiring Software Engineer. I'm deeply passionate
       about learning and problem-solving. Though I focus on web development, I have also dabbled in cybersecurity,
       game development, and more. I find designing and coding both technically and creatively appealing, and enjoy
@@ -32,7 +52,7 @@
 
     <!-- Areas -->
     <div id='areasSection' class='font-c'>
-      <p class=''>Areas of Interest</p>
+      <p class='sectionHeader'>Areas of Interest</p>
       <div id='areas' class=''>
         <div class=''>
           <p class=''>Frontend Development</p>
@@ -57,10 +77,10 @@
 
     <!-- Skills -->
     <div id='skillsSection' class='font-g-reg'>
-      <p class=''>Skills</p>
+      <p class='sectionHeader'>Skills</p>
 
       <div class='frontEnd'>
-        <p class='font-g-reg'>Languages:</p>
+        <p class='font-c sectionHeader'>Languages:</p>
         <div id='langsList'>
           <p>Java</p>
           <p>JavaScript</p>
@@ -69,7 +89,7 @@
         </div>
       </div>
       <div class='frontEnd'>
-        <p class=''>Technologies:</p>
+        <p class='font-c sectionHeader'>Technologies:</p>
         <div id='techList'>
           <p>React</p>
           <p>Firebase</p>
@@ -82,12 +102,31 @@
 
     <!-- Projects -->
     <div id='projectsSection' class='font-c'>
-      <p class='font-g-reg'>Projects</p>
+      <p class='font-g-reg sectionHeader'>Projects</p>
       <div id='projectGrid' class=''>
-        <div class=''>
-          <p class=''>GWOrg</p>
-          <p class=''>September - 2024</p>
-          <a href=""><img src="assets/GWOrgTitle.png" class='' alt='GWOrg' /></a>
+        <div class='projectCard'>
+          <div class='projectInfo'>
+            <h2 class='font-g-reg'>GWOrg</h2>
+            <p class="">Organizational web app to track traveling items</p>
+            <ul class="projectFeatures">
+              <li class="feature">React</li>
+              <li class="feature">Bootstrap</li>
+              <li class="feature">Firebase</li>
+            </ul>
+          </div>
+          <a href="https://dalpalcarl.github.io/GWOrgWeb/" ><img src="assets/GWOrg1.png" class='' alt='GWOrg' /></a>
+        </div>
+        <div class='projectCard'>
+          <div class='projectInfo'>
+            <h2 class='font-g-reg'>JJScheduler</h2>
+            <p class="">Scheduling web app to track work shifts online</p>
+            <ul class="projectFeatures">
+              <li class="feature">React</li>
+              <li class="feature">Bootstrap</li>
+              <li class="feature">Firebase</li>
+            </ul>
+          </div>
+          <a href="https://dalpalcarl.github.io/GWOrgWeb/" ><img src="assets/JJScheduler.png" class='' alt='GWOrg' /></a>
         </div>
       </div>
     </div>
