@@ -1,0 +1,85 @@
+:root {
+    --highlight-color: #76ABAE;
+    --color-light: #EEEEEE;
+    --color-reg: #31363F;
+    --color-dark: #222831;
+}
+
+html {
+    background-color: var(--color-reg);
+}
+
+body {
+    display: flex;
+}
+
+/* Fonts */
+
+.font-g-reg {
+    font-family: "Goldman", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-c {
+    font-family: "Commissioner", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "FLAR" 0,
+      "VOLM" 0;
+}
+
+/* ID Styles */
+
+#folioHeader{
+    margin: -10px;
+    padding: 0px;
+    position: fixed;
+    background-color: var(--color-dark);
+    width: 400px;
+    height: 100vh;
+}
+
+#folioImg {
+    border-radius: 50%;
+    border-width: 50px;
+    border: .25rem solid var(--highlight-color);
+    margin-bottom: 1rem;
+    width: clamp(200px, 20%, 300px);
+}
+
+#headerLinks a {
+    padding-inline: 1rem;
+    text-decoration-line: none;
+}
+
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Class Styles */
+
+.titleText {
+    color: var(--highlight-color);
+    font-size: 2rem;
+}
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    margin-left: 500px;
+    color: var(--highlight-color);
+}
+
+/* Queries */
+
+@media (max-width: 1000px){
+    #folioHeader {
+        position: relative;
+    }
+    
+}
