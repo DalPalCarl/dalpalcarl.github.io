@@ -37,12 +37,14 @@ body {
 /* ID Styles */
 
 #folioHeader{
+    display: flex;
     margin: -10px;
     padding: 30px;
     position: fixed;
     background-color: var(--color-dark);
     width: 270px;
     height: 100vh;
+    border-right: var(--highlight-color) 10px;
 }
 
 #folioContent {
@@ -50,10 +52,6 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-}
-
-#folioContent:last-child {
-    margin-top: auto;
 }
 
 #folioImg, #folioImgMobile {
@@ -65,9 +63,12 @@ body {
 
 #mobileHeader {
     display: none;
+    padding-top: 3rem;
+    margin: -2rem;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    background-color: var(--color-dark);
 }
 
 #aboutMe {
@@ -94,10 +95,17 @@ body {
     transition: all 100ms ease-in;
 }
 
+#projectsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #projectGrid {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 50px;
 }
 
@@ -128,6 +136,8 @@ body {
 .headerLinks {
     display: flex;
     flex-direction: row;
+    margin-top: auto;
+    margin-bottom: 1rem;
 }
 
 .headerLinks a {
@@ -197,7 +207,6 @@ body {
     filter: grayscale();
     transform: translate(0px, 0px);
     transition: all 300ms ease;
-    scale: 90%;
     height: 350px;
 
 }
@@ -277,11 +286,18 @@ body {
         display: flex;
     }
     .pageContent {
+        margin: 0rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         display: flex;
-        margin-left: 1rem;
+        flex-direction: column;
+        align-items: center;
+        color: var(--highlight-color);
+        width: 100%;
+        font-size: 1.2rem;
     }
-    .projectCard {
-        scale: 80%;
+    .projectCard * {
+        width: 100%;
     }
     
 }
