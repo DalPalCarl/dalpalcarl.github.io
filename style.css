@@ -45,6 +45,8 @@ body {
     padding: 30px;
     position: fixed;
     background-color: var(--color-dark);
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--color-reg) 10px ), repeating-linear-gradient( var(--color-dark), var(--color-reg) );
     width: 270px;
     height: 100vh;
     border-right: var(--highlight-color) 10px;
@@ -66,11 +68,15 @@ body {
 
 #mobileHeader {
     display: none;
+    margin: -5px;
     padding-top: 3rem;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background-color: var(--color-dark);
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--color-reg) 10px ), repeating-linear-gradient( var(--color-dark), var(--color-reg) );
+    
 }
 
 #navSection ul {
@@ -89,7 +95,6 @@ body {
 
 #navSection ul li:hover {
     transform: translate(20px, 0px);
-    transition: all 100ms ease-in;
 }
 
 #pageContent {
@@ -100,11 +105,24 @@ body {
     width: calc(100% - 450px);
     gap: 100px;
     font-size: 1.2rem;
+    box-shadow: inset 10px var(--highlight-color);
+}
+
+#pageContent:nth-child(odd) {
+    background-color: var(--color-reg);
+}
+#pageContent:nth-child(even) {
+    background-color: var(--color-dark);
 }
 
 #aboutMe {
     display: flex;
     flex-direction: column;
+    font-size: larger;
+}
+
+#areas div {
+    margin-bottom: 50px;;
 }
 
 #projectsSection {
@@ -128,7 +146,8 @@ body {
 }
 
 #skillsSection {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #langsList *, #techList * {
@@ -142,17 +161,36 @@ body {
 
 /* Class Styles */
 
-.titleText {
+.titleName {
+    color: var(--highlight-color);
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-shadow: 0px 0px 12px var(--highlight-color);
+    animation: glow 4000ms ease-in-out infinite forwards;
+}
+.titleSub {
     color: var(--highlight-color);
     font-size: 1.8rem;
-    margin-top: 10px;
+    text-shadow: 0px 0px 5px white;
+    margin-bottom: 20px;
+    animation: glow 4000ms ease-in-out 2000ms infinite forwards;
+}
+
+@keyframes glow {
+    20% {
+        text-shadow: 0px 0px 1px var(--highlight-color);
+    }
+    40% {
+        text-shadow: 0px 0px 0px;
+    }
 }
 
 .headerLinks {
     display: flex;
     flex-direction: row;
     margin-top: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .headerLinks a {
@@ -164,7 +202,10 @@ body {
 
 .headerLinks a:hover {
     transform: translate(0px, -15px) scale(110%);
-    transition: all 100ms ease;
+}
+
+.headerLinks a:hover path {
+    fill: white;
 }
 
 .icon {
@@ -173,7 +214,7 @@ body {
 }
 
 .iconLink path {
-    fill: var(--highlight-color)
+    fill: var(--highlight-color);
 }
 
 .sectionHeader {
@@ -285,10 +326,6 @@ body {
         display: none;
     }
 
-    #projectsSection {
-        width: 100%;
-    }
-
     #projectGrid {
         gap: calc(100px);
     }
@@ -300,7 +337,6 @@ body {
         color: var(--highlight-color);
         font-size: 1.2rem;
         background-size: cover;
-        width: 100%;
     }
 
     #pageContent {
@@ -309,7 +345,7 @@ body {
         flex-direction: column;
         align-items: center;
         color: var(--highlight-color);
-        width: calc(100%);
+        width: calc(95%);
         font-size: 1.2rem;
     }
 
@@ -319,17 +355,30 @@ body {
 
 
 
+    .titleName {
+        font-size: 3rem;
+    }
 
-
+    .icon {
+        width: 20vw;
+    }
 
     .iconSpan {
         svg {
             filter: grayscale(0);
             transition: all 100ms ease;
+            animation: floating 3s forwards 0s infinite ease-in-out;
         }
         p {
             opacity: 100;
             transition: all 100ms ease;
+            font-size: .8rem;
+        }
+    }
+
+    @keyframes floating {
+        50% {
+            transform: translate(0px, -10px);
         }
     }
     
@@ -376,3 +425,4 @@ body {
     }
     
 }
+
